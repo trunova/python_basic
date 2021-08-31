@@ -8,7 +8,8 @@ def reversNumber(N):
         i -= 1
     i -= 1
     while i != -1:
-        wholePart += N[i]
+        if N[i] != '0':
+            wholePart += N[i]
         i -= 1
     return wholePart + fractionalPart
 
