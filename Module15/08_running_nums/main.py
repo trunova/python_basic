@@ -5,8 +5,11 @@ for i in range(int(input('Сколько элементов в изначаль�
     listN.append(int(input()))
 print('Изначальный список: ', listN)
 newListN = []
+while k > len(listN):
+    k -= len(listN)
 for i in range(len(listN) - k, len(listN)):
     newListN.append(listN[i])
 for i in range(len(listN) - k):
     newListN.append(listN[i])
+
 print('Сдвинутый список:', newListN)

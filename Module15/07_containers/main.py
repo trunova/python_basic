@@ -5,7 +5,7 @@ for i in range(int(input('Кол-во контейнеров: '))):
         listContainers.append(w)
     else: print('Вес контейнера не должен превышать 200 кг')
 newW = int(input('Введите вес нового контейнера: '))
-newI = 0
+newI = len(listContainers) + 1
 if newW < 200:
     for i in range(len(listContainers)):
         if newW > listContainers[i]:
