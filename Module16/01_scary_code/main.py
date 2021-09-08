@@ -7,18 +7,14 @@ t = 0
 for i in a:
     if i == 5:
         t += 1
-print(t)
-d = []
-for i in a:
-    if i != 5:
-        d.append(i)
+        a.remove(5)
+print('Кол-во цифр 5 при первом объединении:',t)
 for i in c:
-    d.append(i)
+    a.append(i)
 t = 0
-for i in d:
+for i in a:
     if i == 3:
         t += 1
-print(t)
-print(d)
+print('Кол-во цифр 3 при втором объединении:', t)
+print('Итоговый список:', a)
 
-# TODO переписать программу
