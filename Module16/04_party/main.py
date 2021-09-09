@@ -11,8 +11,10 @@ while True:
             guests.append(name)
     elif statys == 'ушел':
         name = input('Имя гостя: ')
-        print('Пока, ' + name + '!')
-        guests.remove(name)
+        if name in guests:
+            print('Пока, ' + name + '!')
+            guests.remove(name)
+        else: print('Гостя с таким именем нет на вечеринке')
     elif statys == 'Пора спать':
         print('Вечеринка закончилась, все легли спать.')
         break

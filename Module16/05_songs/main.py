@@ -9,15 +9,20 @@ violator_songs = [
     ['Blue Dress', 4.29],
     ['Clean', 5.83]
 ]
-
+newListSong = []
 numberOfSongs = int(input('Сколько песен выбрать? '))
 n = 0
 for i in range(numberOfSongs):
     print('Название', i+1, 'песни:', end=' ')
     name = input()
     for j in violator_songs:
-        if j[0] == name:
-            n += j[1]
+        if name in newListSong:
+            print('Эта песня уже есть в плейлисте')
             break
+        else:
+            if j[0] == name:
+                n += j[1]
+                newListSong.append(name)
+                break
     else: print('В списке нет такой песни')
 print('Общее время звучания песен: ', n, 'минут')

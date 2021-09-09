@@ -6,6 +6,7 @@ print('Последовательность: ', listN)
 startInd = 0
 endInd = countNum - 1
 start = startInd
+k = 0
 while True:
     if listN[endInd] != listN[startInd]:
         startInd += 1
