@@ -9,5 +9,11 @@ violator_songs = {
     'Blue Dress': 4.29,
     'Clean': 5.83
 }
-
-# TODO здесь писать код
+time = 0
+for i in range(int(input('Сколько песен выбрать? '))):
+    print('Название {0} песни:'.format(i+1), end=' ')
+    song = violator_songs.get(input())
+    if song != None:
+        time += song
+    else: print('Ошибка: такой песни нет в списке')
+print('Общее время звучания песен: {0} минут'.format(round(time, 2)))

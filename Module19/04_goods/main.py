@@ -24,4 +24,10 @@ store = {
     ],
 }
 
-# TODO здесь писать код
+for i_key in goods:
+    count = 0
+    s = 0
+    for i in store[goods.get(i_key)]:
+        count += i['quantity']
+        s += i['price'] * i['quantity']
+    print('{0} - {1} шт, стоимость {2} руб'.format(i_key, count, s))
