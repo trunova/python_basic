@@ -1,5 +1,5 @@
 n = int(input('Введите максимальное число: '))
-listN = list()
+listN = [i for i in range(1,n+1)]
 while True:
     s = input('Нужное число есть среди вот этих чисел: ')
     if s == 'Помогите!' or len(listN) == 1:
