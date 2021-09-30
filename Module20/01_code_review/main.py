@@ -22,23 +22,18 @@ students = {
 
 def f(dict):
     lst = []
-    string = ''
-    for i in dict:
-        lst += (dict[i]['interests'])
-        string += dict[i]['surname']
-    cnt = 0
-    for s in string:
-        cnt += 1
-    return lst, cnt
-
+    l = 0
+    for i_num, i_information in students.items():
+        if 'interests' in i_information:
+            lst += i_information['interests']
+        if 'surname' in i_information:
+            l += len(i_information['surname'])
+    return lst, l
 
 pairs = []
-for i in students:
-    pairs += (i, students[i]['age'])
-
-
-my_lst = f(students)[0]
-l = f(students)[1]
+for i_num, i_information in students.items():
+    if 'age' in i_information:
+        pairs += (i_num, i_information['age'])
+print(pairs)
+my_lst, l = f(students)
 print(my_lst, l)
-
-# TODO исправить код
