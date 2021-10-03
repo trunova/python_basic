@@ -11,7 +11,7 @@ while True:
     act = int(input('Номер действия: '))
 
     if act == 1:
-        name = (input('Имя: '), input('Фамилия: '))
+        name = (convert(input('Имя: ')), convert(input('Фамилия: ')))
         number = input('Номер телефона: ')
         if name in phone_book:
             print('{0} {1} уже есть в телефонной книге'.format(
