@@ -14,7 +14,7 @@ def minDictValues(d):
     minInd = ''
     min = sys.maxsize
     for i_key, i_value in d.items():
-        if int(i_value) < min:
+        if int(i_value) <= min:
             min = int(i_value)
             minInd = i_key
     return minInd
