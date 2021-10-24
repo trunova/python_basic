@@ -1,3 +1,4 @@
+import copy
 site = {
     'html': {
         'head': {
@@ -15,8 +16,9 @@ def siteOutput(n):
     for _ in range(1, n + 1):
         name = input('Введите название продукта для нового сайта: ')
         if not name in dictSite.keys():
-            site['html']['body']['h2'] = 'У нас самая низкая цена на {}'.format(name)
-            dictSite[name] = site
+            # site['html']['body']['h2'] = 'У нас самая низкая цена на {}'.format(name)
+            dictSite[name] = copy.deepcopy(site)
+            dictSite[name]['html']['body']['h2'] = 'У нас самая низкая цена на {}'.format(name)
         for site_name, value in dictSite.items():
             print('Сайт для {}:'.format(site_name))
             print('site = {')
