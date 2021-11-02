@@ -5,7 +5,7 @@ p = input('Куда хотите сохранить документ? '
 name = input('\nВведите имя файла:')
 pathName = os.path.join(*p, name)
 print(pathName)
-f = open(name, 'r+')
+f = open(name, 'w')
 if os.path.getsize(name) > 0:
     answer = input('Вы действительно хотите перезаписать файл? ').lower()
     if answer == 'да':
