@@ -21,13 +21,15 @@ def logging(func: Callable) -> Any:
                     nameEx=type(exception).__name__,
                     date=datetime.now()))
             return result
+
     return wrapped_func
 
 
 @logging
 def division(dividend: float, divider: float) -> float:
     """ Деление """
-    return dividend/divider
+    return dividend / divider
+
 
 @logging
 def mul(factor1: float, factor2: float):
@@ -35,6 +37,7 @@ def mul(factor1: float, factor2: float):
     lst = [2, 3, 4]
     tmp = lst[8]
     return factor1 * factor2
+
 
 print(division(10, 0))
 print(mul(10, 2))
