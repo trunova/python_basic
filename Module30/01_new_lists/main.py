@@ -9,5 +9,5 @@ numbers: List[int] = [22, 33, 10, 6894, 11, 2, 1]
 if __name__ == "__main__":
     result1 = list(map(lambda num: round(num * num * num, 3), floats))
     result2 = list(filter(lambda name: len(name) >= 5, names))
-    result3 = reduce(lambda a, b: a + b, numbers)
+    result3 = reduce(lambda a, b: a * b, numbers)
     print(result1, "\n", result2, "\n", result3)
