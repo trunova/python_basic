@@ -1,11 +1,9 @@
-# TODO здесь писать код
+import re
 import requests
-import json
 
 if __name__ == "__main__":
-    req = requests.get('http://www.columbia.edu/~fdc/sample.html')
-
-    data = json.loads(req.text)
-    print(data)
-    with open('test.json', 'w', encoding="UTF8") as file:
-        json.dump(data, file, indent=4, ensure_ascii=False)
+    my_req = requests.get('http://www.columbia.edu/~fdc/sample.html')
+    text = my_req.text
+    result = re.findall(r'<h3 .*>.*</h3>', text)
+    subtitles_list = [h[h.find('>') + 1: h.find('<', h.find('>') + 1)] for h in result]
+    print(subtitles_list)
